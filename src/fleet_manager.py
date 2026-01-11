@@ -69,7 +69,10 @@ class FleetManager:
                 if maintenance_status in status_count:
                     status_count[maintenance_status] += 1
                 
-        return status_count
+        print("\n Fleet Analytics Summary\n")
+        print(f"Available Vehicles       : {status_count['Available']}")
+        print(f"Vehicles On Trip         : {status_count['On Trip']}")
+        print(f"Under Maintenance        : {status_count['Under Maintenance']}")
             
 if __name__ == "__main__":
     fleet_manager = FleetManager()
