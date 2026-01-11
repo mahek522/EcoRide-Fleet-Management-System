@@ -1,3 +1,6 @@
+from electric_car import ElectricCar
+from electric_scooter import ElectricScooter
+
 class FleetManager:
     def __init__(self):
         
@@ -26,3 +29,21 @@ class FleetManager:
     def get_vehicles_by_hub(self, hub_name):
         
         return self.fleet_hubs.get(hub_name, [])
+    
+    def search_by_hub(self, hub_name):
+        return self.fleet_hubs.get(hub_name, [])
+
+    def search_high_battery(self, hub_name):
+        return list(filter(
+            lambda v: v.battery_percentage > 80,
+            self.fleet_hubs.get(hub_name, [])
+        ))
+        
+    vehicles = [
+    ElectricCar("C101", "Tesla Model 3", 90, 5),
+    ElectricScooter("S201", "Xiaomi Pro", 85, 25)
+    ]
+    
+    for v in vehicles:
+        print(f"{v.model} Trip Cost:", v.calculate_trip_cost(10))
+    
