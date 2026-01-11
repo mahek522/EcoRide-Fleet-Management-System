@@ -3,6 +3,7 @@ from abc import ABC, abstractmethod
 print("Welcome to Eco-Ride Urban Mobility System")
 
 class Vehicle(ABC):
+    
     def __init__(self, vehicle_id, model, battery_percentage):
         self.vehicle_id = vehicle_id
         self.model = model
@@ -20,6 +21,10 @@ class Vehicle(ABC):
             self.battery_percentage = value
         else:
             raise ValueError("Battery must be between 0 and 100")
+        
     @abstractmethod
     def calculate_trip_cost(self, distance):
         pass
+    
+    def __eq__(self, other):
+        return self.vehicle_id == other.vehicle_id
