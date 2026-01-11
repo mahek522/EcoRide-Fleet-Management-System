@@ -57,6 +57,20 @@ class FleetManager:
                 print(f"ID: {vehicle.vehicle_id}, Model: {vehicle.model}, Battery: {vehicle.battery_percentage}%")
             print()  # Blank line for better readability
             
+    def fleet_analytics(self):
+        status_count = {
+            "Available": 0,
+            "On Trip": 0,
+            "Under Maintenance": 0
+        }
+        for vehicles in self.hubs.values():
+            for vehicle in vehicles :
+                maintenance_status = vehicle.get_maintenance_status()
+                if maintenance_status in status_count:
+                    status_count[maintenance_status] += 1
+                
+        return status_count
+            
 if __name__ == "__main__":
     fleet_manager = FleetManager()
     # Example usage
