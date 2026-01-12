@@ -30,6 +30,7 @@ class FleetManager:
         
         return self.fleet_hubs.get(hub_name, [])
     
+    #UC8-Search by Hub and Battery percentage
     def search_by_hub(self, hub_name):
         return self.fleet_hubs.get(hub_name, [])
 
@@ -38,7 +39,7 @@ class FleetManager:
             lambda v: v.battery_percentage > 80,
             self.fleet_hubs.get(hub_name, [])
         ))
-        
+    #UC9-Categorize Vehicles by Type  
     def categorize_vehicles(self):
         categories = {}
         for vehicles in self.fleet_hubs.values():
@@ -57,6 +58,7 @@ class FleetManager:
                 print(f"ID: {vehicle.vehicle_id}, Model: {vehicle.model}, Battery: {vehicle.battery_percentage}%")
             print()  # Blank line for better readability
             
+    #UC10-Fleet Analytics
     def fleet_analytics(self):
         status_count = {
             "Available": 0,
@@ -74,10 +76,22 @@ class FleetManager:
         print(f"Vehicles On Trip         : {status_count['On Trip']}")
         print(f"Under Maintenance        : {status_count['Under Maintenance']}")
         
+    #UC11-Sort Vehicles by Model 
     def sort_by_model(self, hub_name):
         
         vehicles = self.fleet_hubs.get(hub_name, [])
         return sorted(vehicles, key = lambda v : v.model)
+    
+    #UC12-Advanced Sorting - Sort Vehicles by Battery Level
+    def sort_by_battery_level(self, hub_name):
+        if hub_name not in self.fleet_hubs:
+            raise ValueError("Hub does not exist")
+
+        self.fleet_hubs[hub_name].sort(
+            key=lambda vehicle: vehicle.battery_percentage,
+            reverse=True
+        )
+
             
 if __name__ == "__main__":
     fleet_manager = FleetManager()
