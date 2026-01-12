@@ -42,3 +42,6 @@ class Vehicle(ABC):
     
     def __eq__(self, other):
         return self.vehicle_id == other.vehicle_id
+    
+    def __str__(self):
+        return f"{self.vehicle_id} | {self.model} | Battery level: {self.battery_percentage}% | Status: {self.get_maintenance_status()}"
