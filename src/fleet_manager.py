@@ -1,6 +1,6 @@
 from electric_car import ElectricCar
 from electric_scooter import ElectricScooter
-
+import csv
 class FleetManager:
     def __init__(self):
         
@@ -65,7 +65,7 @@ class FleetManager:
             "On Trip": 0,
             "Under Maintenance": 0
         }
-        for vehicles in self.hubs.values():
+        for vehicles in self.fleet_hubs.values():
             for vehicle in vehicles :
                 maintenance_status = vehicle.get_maintenance_status()
                 if maintenance_status in status_count:
@@ -90,9 +90,24 @@ class FleetManager:
         self.fleet_hubs[hub_name].sort(
             key=lambda vehicle: vehicle.battery_percentage,
             reverse=True
-        )
-
+            )
+    #UC13- File I/O(CSV Persistence) 
+    def save_to_csv(self, filename):
+        with open(filename, "w") as file:
+            csv_writer = csv.writer(file)
             
+            csv_writer.writerow(["Fleet-Hub", "Vehicle ID", "Model", "Battery", "Type"])
+            
+            for hubs, vehicle in self.fleet_hubs.items():
+                for v in vehicle:
+                    csv_writer.writerow([
+                        hubs,
+                        v.vehicle_id,
+                        v.model,
+                        v.battery_percentage,
+                        v.__class__.__name__
+                        ])
+                
 if __name__ == "__main__":
     fleet_manager = FleetManager()
     # Example usage
@@ -100,5 +115,13 @@ if __name__ == "__main__":
     fleet_manager.add_vehicle("Downtown", ElectricCar("C101", "Tesla Model 3", 90, 5))
     fleet_manager.add_vehicle("Downtown", ElectricScooter("S201", "Xiaomi Pro", 85, 25))
     
-    # Display categorized vehicles
+    #UC9 Display categorized vehicles
     fleet_manager.display_categorized_vehicles()
+    #UC10 Fleet Analytics
+    fleet_manager.fleet_analytics()
+    #UC11 Sort by Model
+    fleet_manager.sort_by_model("Downtown")
+    #UC12 Sort by Battery Percentage
+    fleet_manager.sort_by_battery_level("Downtown")
+    #UC13 Save to CSV
+    fleet_manager.save_to_csv("fleet_data.csv")
