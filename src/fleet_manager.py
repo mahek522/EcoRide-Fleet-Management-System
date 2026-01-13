@@ -1,6 +1,7 @@
 from electric_car import ElectricCar
 from electric_scooter import ElectricScooter
 import csv
+import json
 class FleetManager:
     def __init__(self):
         
@@ -107,21 +108,19 @@ class FleetManager:
                         v.battery_percentage,
                         v.__class__.__name__
                         ])
-                
-if __name__ == "__main__":
-    fleet_manager = FleetManager()
-    # Example usage
-    fleet_manager.add_hub("Downtown")
-    fleet_manager.add_vehicle("Downtown", ElectricCar("C101", "Tesla Model 3", 90, 5))
-    fleet_manager.add_vehicle("Downtown", ElectricScooter("S201", "Xiaomi Pro", 85, 25))
     
-    #UC9 Display categorized vehicles
-    fleet_manager.display_categorized_vehicles()
-    #UC10 Fleet Analytics
-    fleet_manager.fleet_analytics()
-    #UC11 Sort by Model
-    fleet_manager.sort_by_model("Downtown")
-    #UC12 Sort by Battery Percentage
-    fleet_manager.sort_by_battery_level("Downtown")
-    #UC13 Save to CSV
-    fleet_manager.save_to_csv("fleet_data.csv")
+    def save_to_json(self, filename):
+        data = {}
+        for hubs, vehicle in self.fleet_hubs.items():
+            data[hubs] = []
+            for v in vehicle:
+                data[hubs].append({
+                    "Vehicle-ID": v.vehicle_id,
+                    "Model": v.model,
+                    "Battery": v.battery_percentage,
+                    "Type": v.__class__.__name__
+                })
+        with open(filename, "w") as file:
+            json.dump(data, file, indent=4)
+            
+                    
