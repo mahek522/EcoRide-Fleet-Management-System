@@ -1,7 +1,5 @@
 from abc import ABC, abstractmethod
 
-print("Welcome to Eco-Ride Urban Mobility System")
-
 class Vehicle(ABC):
     
     def __init__(self, vehicle_id, model, battery_percentage):

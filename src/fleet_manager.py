@@ -1,9 +1,8 @@
-from electric_car import ElectricCar
-from electric_scooter import ElectricScooter
 import csv
 import json
 class FleetManager:
     def __init__(self):
+        
         
         self.fleet_hubs = {}  # {hub_name: [Vehicle objects]}
 

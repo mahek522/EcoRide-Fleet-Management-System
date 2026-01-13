@@ -20,7 +20,7 @@ def display_menu():
 
 
 def main():
-    print("Welcome to Eco-Ride Urban Mobility System 🚗🛴")
+    print("Welcome to Eco-Ride Urban Mobility System ")
     manager = FleetManager()
 
     while True:
