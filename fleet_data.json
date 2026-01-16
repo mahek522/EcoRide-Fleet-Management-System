@@ -1,78 +1,78 @@
 {
-    "Downtown": [
-        {
-            "Vehicle-ID": "CAR-EV-003",
-            "Model": "Hyundai Ioniq 5",
-            "Battery": 89,
-            "Type": "ElectricCar"
-        },
-        {
-            "Vehicle-ID": "SCOOT-EV-103",
-            "Model": "Ather 450X",
-            "Battery": 85,
-            "Type": "ElectricScooter"
-        },
-        {
-            "Vehicle-ID": "CAR-EV-001",
-            "Model": "Tesla Model 3",
-            "Battery": 78,
-            "Type": "ElectricCar"
-        },
-        {
-            "Vehicle-ID": "SCOOT-EV-101",
-            "Model": "Xiaomi M365",
-            "Battery": 66,
-            "Type": "ElectricScooter"
-        },
-        {
-            "Vehicle-ID": "SCOOT-EV-102",
-            "Model": "Segway Ninebot F25",
-            "Battery": 53,
-            "Type": "ElectricScooter"
-        },
-        {
-            "Vehicle-ID": "CAR-EV-002",
-            "Model": "Nissan Leaf",
-            "Battery": 52,
-            "Type": "ElectricCar"
-        }
-    ],
-    "Airport": [
-        {
-            "Vehicle-ID": "CAR-EV-004",
-            "Model": "Ford Mustang Mach-E",
-            "Battery": 63,
-            "Type": "ElectricCar"
-        },
-        {
-            "Vehicle-ID": "CAR-EV-005",
-            "Model": "Chevrolet Bolt EV",
-            "Battery": 45,
-            "Type": "ElectricCar"
-        },
-        {
-            "Vehicle-ID": "CAR-EV-006",
-            "Model": "Audi e-tron",
-            "Battery": 81,
-            "Type": "ElectricCar"
-        },
-        {
-            "Vehicle-ID": "SCOOT-EV-104",
-            "Model": "Ola S1 Pro",
-            "Battery": 72,
-            "Type": "ElectricScooter"
-        },
-        {
-            "Vehicle-ID": "SCOOT-EV-105",
-            "Model": "Bajaj Chetak Ev",
-            "Battery": 49,
-            "Type": "ElectricScooter"
-        },
-        {
-            "Vehicle-ID": "SCOOT-EV-106",
-            "Model": "TVS-iQube",
-            "Battery": 91,
-            "Type": "ElectricScooter"
-        }
-    ]
+  "Downtown": [
+    {
+      "Vehicle-ID": "CAR-EV-003",
+      "Model": "Hyundai Ioniq 5",
+      "Battery": 89,
+      "Type": "ElectricCar"
+    },
+    {
+      "Vehicle-ID": "SCOOT-EV-103",
+      "Model": "Ather 450X",
+      "Battery": 85,
+      "Type": "ElectricScooter"
+    },
+    {
+      "Vehicle-ID": "CAR-EV-001",
+      "Model": "Tesla Model 3",
+      "Battery": 78,
+      "Type": "ElectricCar"
+    },
+    {
+      "Vehicle-ID": "SCOOT-EV-101",
+      "Model": "Xiaomi M365",
+      "Battery": 66,
+      "Type": "ElectricScooter"
+    },
+    {
+      "Vehicle-ID": "SCOOT-EV-102",
+      "Model": "Segway Ninebot F25",
+      "Battery": 53,
+      "Type": "ElectricScooter"
+    },
+    {
+      "Vehicle-ID": "CAR-EV-002",
+      "Model": "Nissan Leaf",
+      "Battery": 52,
+      "Type": "ElectricCar"
+    }
+  ],
+  "Airport": [
+    {
+      "Vehicle-ID": "CAR-EV-004",
+      "Model": "Ford Mustang Mach-E",
+      "Battery": 63,
+      "Type": "ElectricCar"
+    },
+    {
+      "Vehicle-ID": "CAR-EV-005",
+      "Model": "Chevrolet Bolt EV",
+      "Battery": 45,
+      "Type": "ElectricCar"
+    },
+    {
+      "Vehicle-ID": "CAR-EV-006",
+      "Model": "Audi e-tron",
+      "Battery": 81,
+      "Type": "ElectricCar"
+    },
+    {
+      "Vehicle-ID": "SCOOT-EV-104",
+      "Model": "Ola S1 Pro",
+      "Battery": 72,
+      "Type": "ElectricScooter"
+    },
+    {
+      "Vehicle-ID": "SCOOT-EV-105",
+      "Model": "Bajaj Chetak Ev",
+      "Battery": 49,
+      "Type": "ElectricScooter"
+    },
+    {
+      "Vehicle-ID": "SCOOT-EV-106",
+      "Model": "TVS-iQube",
+      "Battery": 91,
+      "Type": "ElectricScooter"
+    }
+  ]
 }

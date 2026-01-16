@@ -1,13 +1,25 @@
-Fleet-Hub,Vehicle ID,Model,Battery,Type
-Downtown,CAR-EV-003,Hyundai Ioniq 5,89,ElectricCar
-Downtown,SCOOT-EV-103,Ather 450X,85,ElectricScooter
-Downtown,CAR-EV-001,Tesla Model 3,78,ElectricCar
-Downtown,SCOOT-EV-101,Xiaomi M365,66,ElectricScooter
-Downtown,SCOOT-EV-102,Segway Ninebot F25,53,ElectricScooter
-Downtown,CAR-EV-002,Nissan Leaf,52,ElectricCar
-Airport,CAR-EV-004,Ford Mustang Mach-E,63,ElectricCar
-Airport,CAR-EV-005,Chevrolet Bolt EV,45,ElectricCar
-Airport,CAR-EV-006,Audi e-tron,81,ElectricCar
-Airport,SCOOT-EV-104,Ola S1 Pro,72,ElectricScooter
-Airport,SCOOT-EV-105,Bajaj Chetak Ev,49,ElectricScooter
-Airport,SCOOT-EV-106,TVS-iQube,91,ElectricScooter
+Fleet-Hub,Vehicle ID,Model,Battery,Type
+
+Downtown,CAR-EV-003,Hyundai Ioniq 5,89,ElectricCar
+
+Downtown,SCOOT-EV-103,Ather 450X,85,ElectricScooter
+
+Downtown,CAR-EV-001,Tesla Model 3,78,ElectricCar
+
+Downtown,SCOOT-EV-101,Xiaomi M365,66,ElectricScooter
+
+Downtown,SCOOT-EV-102,Segway Ninebot F25,53,ElectricScooter
+
+Downtown,CAR-EV-002,Nissan Leaf,52,ElectricCar
+
+Airport,CAR-EV-004,Ford Mustang Mach-E,63,ElectricCar
+
+Airport,CAR-EV-005,Chevrolet Bolt EV,45,ElectricCar
+
+Airport,CAR-EV-006,Audi e-tron,81,ElectricCar
+
+Airport,SCOOT-EV-104,Ola S1 Pro,72,ElectricScooter
+
+Airport,SCOOT-EV-105,Bajaj Chetak Ev,49,ElectricScooter
+
+Airport,SCOOT-EV-106,TVS-iQube,91,ElectricScooter

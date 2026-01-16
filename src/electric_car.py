@@ -1,8 +1,8 @@
-from vehicle import Vehicle
+from src.vehicle import Vehicle
 
 class ElectricCar(Vehicle):
     
-    def __init__(self, vehicle_id, model, battery_percentage, seating_capacity):
+    def __init__(self, vehicle_id, model, battery_percentage, seating_capacity=5):
         super().__init__(vehicle_id, model, battery_percentage)
         self.seating_capacity = seating_capacity
         
